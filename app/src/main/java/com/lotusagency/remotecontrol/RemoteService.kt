@@ -98,7 +98,6 @@ class RemoteService : Service() {
     }
 
     private suspend fun connectWebSocket() {
-        // Fetch URL mới từ Gist mỗi lần kết nối
         updateNotification("Fetching server URL...")
         serverUrl = withContext(Dispatchers.IO) { Config.fetchServerUrl() }
         updateNotification("Connecting to server...")
@@ -110,7 +109,6 @@ class RemoteService : Service() {
             .build()
 
         while (scope.isActive) {
-            // Refresh URL mỗi lần reconnect
             val currentUrl = withContext(Dispatchers.IO) { Config.fetchServerUrl() }
             if (currentUrl != serverUrl) {
                 serverUrl = currentUrl
