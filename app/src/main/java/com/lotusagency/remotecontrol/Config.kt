@@ -4,9 +4,7 @@ import java.net.URL
 import java.security.MessageDigest
 
 object Config {
-    // URL Gist để lấy server URL động
     const val GIST_RAW_URL = "https://gist.githubusercontent.com/nguyenkienleho/15c5796dbd51ccb61123055850aea9da/raw/lotus_server.txt"
-    // Fallback nếu không fetch được
     const val FALLBACK_URL = "wss://coordinate-participation-innovation-effects.trycloudflare.com"
     const val SECRET_KEY   = "LotusAgency2025!"
     const val DEVICE_ID    = "phone_01"
