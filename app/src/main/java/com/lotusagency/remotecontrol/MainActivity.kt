@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val tvInfo = TextView(this).apply {
-            text = "Device ID: ${Config.DEVICE_ID}\nServer: ${Config.SERVER_URL.take(50)}..."
+            text = "Device ID: ${Config.DEVICE_ID}\nServer: ${Config.FALLBACK_URL.take(50)}..."
             textSize = 12f
             setPadding(0, 0, 0, 32)
             setTextColor(0xFF888888.toInt())
